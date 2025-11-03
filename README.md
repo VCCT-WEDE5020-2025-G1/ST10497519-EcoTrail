@@ -48,7 +48,7 @@ This website is compatible with all modern web browsers including:
 - Safari
 - Edge
 
-## Updates
+## Updates <2>
 
 - Added Interactive Map for users.
 - Added different hikeing routes.
@@ -59,6 +59,8 @@ This website is compatible with all modern web browsers including:
 - Allow user to message the website.
 - FAQs for users to have some questions answered.
 - Updated ReadME
+
+- Added References
 
 ## Git Repo
 
@@ -71,3 +73,7 @@ For questions about this project:
 - Use the contact form on our website
 - Email: st10497519@vcconnect.edu.za
 - Phone: 0710838700
+
+## References
+
+IIE Module Manual WEDE5020 [online] Available at: https://advtechonline.sharepoint.com/:w:/r/sites/TertiaryStudents/_layouts/15/Doc.aspx?sourcedoc=%7B2D7589E9-374B-43DE-9596-EF35D83EBD02%7D&file=WEDE5020MM.docx&action=default&mobileredirect=true [Accessed 02/11/2025]
