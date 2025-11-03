@@ -64,7 +64,7 @@ This website is compatible with all modern web browsers including:
 
 ## Git Repo
 
-https://github.com/ST10497519/ST10497519-EcoTrail
+https://github.com/VCCT-WEDE5020-2025-G1/ST10497519-EcoTrail
 
 ## Contact
 
