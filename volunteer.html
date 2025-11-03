@@ -8,40 +8,103 @@
   </head>
   <body class="volunteer-page">
     <header>
-      <!-- Navigation Bar -->
       <nav>
         <a href="index.html">
           <img src="images/LOGO.jpeg" alt="EcoTrail Logo" class="logo"
         /></a>
         <div class="nav-links">
           <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
         </div>
       </nav>
     </header>
 
     <main>
       <section class="content-card">
-        <h1>Volunteering Events</h1>
+        <h1>Volunteer With Us</h1>
+        <form
+          class="volunteer-form"
+          action="#"
+          method="post"
+          id="volunteerForm"
+        >
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <h2>Details</h2>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
 
-        <h3>Location</h3>
-        <p>[Location details here]</p>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
 
-        <h3>Date and Time</h3>
-        <p>[Date and time details here]</p>
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required />
 
-        <br /><br />
+          <label for="time">Preferred Time:</label>
+          <input type="time" id="time" name="time" required />
 
-        <h2>
-          <a
-            href="https://forms.gle/yZWskAHsqcRsVeVd6"
-            target="_blank"
-            class="btn"
-            >Link to Volunteering Form</a
-          >
-        </h2>
+          <label for="message">Why do you want to volunteer?</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <small
+            id="wordCount"
+            style="color: #fff; display: block; margin-bottom: 0.5rem"
+          ></small>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div
+          id="successMsg"
+          style="
+            display: none;
+            color: #4caf50;
+            font-weight: bold;
+            margin-top: 1rem;
+          "
+        >
+          Thank you for volunteering! Your submission has been received.
+        </div>
+
+        <script>
+          const form = document.getElementById("volunteerForm");
+          const emailInput = document.getElementById("email");
+          const messageInput = document.getElementById("message");
+          const wordCountDisplay = document.getElementById("wordCount");
+          const successMsg = document.getElementById("successMsg");
+
+          function countWords(str) {
+            return str.trim().split(/\s+/).filter(Boolean).length;
+          }
+
+          messageInput.addEventListener("input", function () {
+            const words = countWords(messageInput.value);
+            wordCountDisplay.textContent = `Word count: ${words}/500`;
+            wordCountDisplay.style.color = words > 500 ? "red" : "#fff";
+          });
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Always prevent default submission
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value)) {
+              alert("Please enter a valid email address.");
+              emailInput.focus();
+              return;
+            }
+            // Word count validation
+            const words = countWords(messageInput.value);
+            if (words > 500) {
+              alert(
+                'Your answer to "Why do you want to volunteer?" must be 500 words or fewer.'
+              );
+              messageInput.focus();
+              return;
+            }
+
+            // If all validations pass, show success message
+            form.style.display = "none";
+            successMsg.style.display = "block";
+          });
+        </script>
       </section>
     </main>
 

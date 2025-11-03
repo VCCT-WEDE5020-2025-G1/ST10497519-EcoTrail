@@ -96,5 +96,39 @@ footer {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.volunteer-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.volunteer-form label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.volunteer-form input,
+.volunteer-form textarea,
+.volunteer-form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.volunteer-form button {
+  background-color: #2e8b57;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.volunteer-form button:hover {
+  background-color: #246b45;
 }
